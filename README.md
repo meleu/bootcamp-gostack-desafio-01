@@ -3,75 +3,56 @@
 </h1>
 
 <h3 align="center">
-  Desafio 1: Conceitos do NodeJS
+  Challenge #1: NodeJS concepts
 </h3>
 
-<blockquote align="center">“Sua única limitação é você mesmo”!</blockquote>
-
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/rocketseat/bootcamp-gostack-desafio-01?color=%2304D361">
-
-  <a href="https://rocketseat.com.br">
-    <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%2304D361">
-  </a>
-
-  <img alt="License" src="https://img.shields.io/badge/license-MIT-%2304D361">
-
-  <a href="https://github.com/Rocketseat/bootcamp-gostack-desafio-01/stargazers">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/rocketseat/bootcamp-gostack-desafio-01?style=social">
-  </a>
-</p>
-
-<p align="center">
-  <a href="#rocket-sobre-o-desafio">Sobre o desafio</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-about">About</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-entrega">Entrega</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
-## :rocket: Sobre o desafio
+## :rocket: About
 
-Crie uma aplicação para armazenar projetos e suas tarefas do zero utilizando [Express](https://expressjs.com/pt-br/).
+Create, from scratch, an aplication to store projects and your tasks using [Express](https://expressjs.com/pt-br/).
 
-### Rotas
+This is a challenge from the 1st module of [GoStack bootcamp, from Rocketseat](https://rocketseat.com.br/gostack). It's a really intesive Node.js, React and React Native training I took in January/2020.
 
-- `POST /projects`: A rota deve receber `id` e `title` dentro do corpo e cadastrar um novo projeto dentro de um array no seguinte formato: `{ id: "1", title: 'Novo projeto', tasks: [] }`; Certifique-se de enviar tanto o ID quanto o título do projeto no formato string com aspas duplas.
 
-- `GET /projects`: Rota que lista todos projetos e suas tarefas;
+### Routes
 
-- `PUT /projects/:id`: A rota deve alterar apenas o título do projeto com o `id` presente nos parâmetros da rota;
+- `POST /projects`: The route must receive `id` and `title` from the body and register a new project in an array with the following format: `{ id: "1", title: "New project", tasks: [] }`. Make sure to send the new project's ID and the title as a string with double quotes.
 
-- `DELETE /projects/:id`: A rota deve deletar o projeto com o `id` presente nos parâmetros da rota;
+- `GET /projects`: The route used to list all projects and their tasks.
 
-- `POST /projects/:id/tasks`: A rota deve receber um campo `title` e armazenar uma nova tarefa no array de tarefas de um projeto específico escolhido através do `id` presente nos parâmetros da rota;
+- `PUT /projects/:id`: The route must change only the title of the project with the given `id`.
 
-### Exemplo
+- `DELETE /projects/:id`: The route must delete the project with the given `id`
 
-Se eu chamar a rota `POST /projects` repassando `{ id: 1, title: 'Novo projeto' }` e a rota `POST /projects/1/tasks` com `{ title: 'Nova tarefa' }`, meu array de projetos deve ficar assim:
+- `POST /projects/:id/tasks`: The route must receive a `title` field and register a new task in the task's array of the project with the given `id`.
+
+
+### Example
+
+When calling the route `POST /projects` with `{ id: 1, title: 'New project' }` and the route `POST /projects/1/tasks` with `{ title: 'New task' }`, the projects array should be like this:
 
 ```js
 [
   {
     id: "1",
-    title: "Novo projeto",
-    tasks: ["Nova tarefa"]
+    title: "New project",
+    tasks: ["New task"]
   }
 ];
 ```
 
 ### Middlewares
 
-- Crie um middleware que será utilizado em todas rotas que recebem o ID do projeto nos parâmetros da URL que verifica se o projeto com aquele ID existe. Se não existir retorne um erro, caso contrário permita a requisição continuar normalmente;
+- Create a middleware to check if a given ID really exists and use it on all routes receiving a project's ID from the URL. If the given ID doesn't exist, return an error, otherwise, the request can go ahead.
 
-- Crie um middleware global chamado em todas requisições que imprime (`console.log`) uma contagem de quantas requisições foram feitas na aplicação até então;
+- Create a global middleware called in all requests to `console.log` a counter of how many requests were made up to now.
 
-## 📅 Entrega
 
-Esse desafio **não precisa ser entregue** e não receberá correção, mas você pode ver o resultado do [código do desafio aqui](https://github.com/Rocketseat/bootcamp-gostack-desafio-01/blob/master/index.js). Após concluir o desafio, adicionar esse código ao seu Github é uma boa forma de demonstrar seus conhecimentos para oportunidades futuras.
+## :memo: License
 
-## :memo: Licença
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
-
----
-
-Feito com ♥ by Rocketseat :wave: [Entre na nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+[MIT LICENSE](LICENSE.md).
