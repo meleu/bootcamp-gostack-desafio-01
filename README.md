@@ -47,6 +47,10 @@ When calling the route `POST /projects` with `{ id: 1, title: 'New project' }` a
 - Create a global middleware called in all requests to `console.log` a counter of how many requests were made up to now.
 
 
-## :memo: License
+## :memo: My Notes
+
+I took some notes about what I learned with this challenge and saved in [mynotes.md](mynotes.md).
+
+## :balance_scale: License
 
 [MIT LICENSE](LICENSE.md).
