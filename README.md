@@ -10,7 +10,7 @@
 
 Create, from scratch, the backend for an application to store projects and your tasks using [Express](https://expressjs.com/pt-br/).
 
-This is a challenge from the 1st module of [GoStack bootcamp, from Rocketseat](https://rocketseat.com.br/gostack). It's a really intesive Node.js, React and React Native training I ([@meleu](https://github.com/meleu)) took in January/2020.
+This is a challenge from the 1st module of [GoStack bootcamp, from Rocketseat](https://rocketseat.com.br/gostack). It's a really intesive Node.js, React and React Native training I ([@meleu](https://github.com/meleu)) started in January/2020.
 
 
 ### Routes
