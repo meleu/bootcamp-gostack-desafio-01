@@ -33,8 +33,12 @@ server.use(requestCounter);
 
 // Create
 server.post('/projects', (req, res) => {
-    // TODO: do not allow repeated IDs
     const { id, title } = req.body;
+
+    if (projects.findIndex((proj) => proj.id === id) !== -1) {
+        return res.status(400).json({ error: `Project ${id} already exists`});
+    }
+
     projects.push({ id, title, tasks: [] });
     return res.json(projects);
 });
@@ -64,9 +68,6 @@ server.put('/projects/:id', (req, res) => {
     const { id } = req.params;
     const { title } = req.body;
     const project = projects.find((proj) => proj.id === id);
-    if (!project) {
-        return null;
-    }
     project.title = title;
     return res.json(project);
 });
